@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fibonacci</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class='main-container'>
+    <div class='opacity'>
+      <div class="container">
+        <div class='logo'>
+          <img src="./img/fibonacci-logo.png" alt="logo">
+        </div>
+        <div class="row">
+        <section class='section-box'>
+          <h1 class='section-box__title'>Fibonacci tool</h1>
+          <p class='section-box__text'>JUST COPY AND PASTE</p>
+        </section>
+
+          <div class='code-box'>
+            <pre><code>
+// Copy and paste this code to browser console
+
+var number = prompt("Hi, Fibonacci! Please, enter forgotten number position!", '');
+var parsedNum = parseFloat(number);
+
+// check for valid value
+if(typeof(parsedNum) === 'number' && !isNaN(parsedNum)) {
+  console.log('Position: '+ parsedNum);
+  console.log('Fibonacci number: '+ fib(parsedNum));
+} else {
+  console.log('Please, enter correct value.');
+}
+
+// Fibonacci function
+function fib(n) {
+  var a = 1, b = 1;
+  for (var i = 3; i <= n; i++) { 
+    var c = a + b; 
+    a=b; 
+    b=c; 
+  } 
+  return b; 
+}
+           </code></pre>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
